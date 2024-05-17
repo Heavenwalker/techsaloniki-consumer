@@ -25,7 +25,7 @@ async function getWeatherData(city, state, country, units) {
         windSpeed: data.wind.speed,
         humidity: data.main.humidity,
         visibility: data.visibility,
-        alerts: data.alerts.length > 0 ? data.alerts : "Enjoy your day",
+        alerts: data.alerts ? data.alerts : "Enjoy your day",
         sunrise: new Date(data.sys.sunrise * 1000).toLocaleString(),
         sunset: new Date(data.sys.sunset * 1000).toLocaleString()
     };
